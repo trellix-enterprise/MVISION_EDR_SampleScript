@@ -1,0 +1,16 @@
+{
+    "data": {
+      "id": "exclusion_id",
+      "type": "threatExclusion",
+      "attributes": {
+        "exclusionName": "Datagenerator.exe",
+        "description": "SHA256 Hash for Datagenerator executable",
+        "exclusionArguments": [
+          {
+            "name": "SHA-256",
+            "value": "51c8e205f3cb6fece20c38e75f5602f9b602c76cb0cd1c008afde60d8aebbba0"
+          }
+        ]
+      }
+    }
+}

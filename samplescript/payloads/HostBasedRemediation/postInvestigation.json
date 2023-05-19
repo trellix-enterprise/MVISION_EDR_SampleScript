@@ -1,0 +1,13 @@
+{
+    "data": {
+        "attributes": {
+            "caseType": "Malware",
+            "caseName": "Test_HR_Integration",
+            "caseHint": "hostname_Sampletest",
+            "casePriority": "High",
+            "evidenceType": "Device", 
+            "hostName": "machine_name"
+        },
+        "type": "investigations"
+    }
+}

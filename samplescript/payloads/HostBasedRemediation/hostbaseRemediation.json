@@ -1,0 +1,12 @@
+{
+    "data": {
+        "type": "hostRemediation",
+        "attributes": {
+            "action": "UnquarantineHost",
+            "investigationId": "investigation_id",
+            "hostIds": [
+                "host_guid"
+            ]
+        }
+    }
+}

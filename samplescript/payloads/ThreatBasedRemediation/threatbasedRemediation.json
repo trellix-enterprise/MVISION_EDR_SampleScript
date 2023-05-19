@@ -1,0 +1,12 @@
+{
+    "data": {
+      "type": "threatRemediation",
+      "attributes": {
+        "action": "StopAndRemove",
+        "threatId": "threat_id",
+        "affectedHostIds": [
+          "res_host"
+        ]
+      }
+    }
+  }
