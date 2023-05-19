@@ -1,0 +1,11 @@
+{
+  "data": {
+    "type": "globalThreatRemediation",
+    "attributes": {
+      "action": "DismissThreat",
+      "threatActionArguments": {
+        "threatId": "threat_id"
+      }
+    }
+  }
+}

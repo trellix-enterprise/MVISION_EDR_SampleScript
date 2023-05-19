@@ -1,0 +1,12 @@
+{
+    "data": {
+      "type": "searchRemediation",
+      "attributes": {
+        "action": "action_taken",
+        "searchId": "search_id",
+        "rowIds": [
+          "row_id"
+        ]
+      }
+    }
+  }
