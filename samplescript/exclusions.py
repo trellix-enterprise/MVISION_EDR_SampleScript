@@ -15,7 +15,7 @@ class exclusions(object):
     def get_threats(self):
         global Auth_token
         global headers
-        Auth_token= "Bearer {}".format(controller.get_token(configfile.gtclient_id, configfile.gtclient_credentials))
+        Auth_token= "Bearer {}".format(controller.get_auth(configfile.gtclient_id_auth, configfile.gtclient_credentials_auth))
         headers = {
             'x-api-key': configfile.x_api_key,
             'Authorization': Auth_token,

@@ -22,6 +22,23 @@ def get_token(client_userid, client_credentials):
         exit()
     return token    
 
+# Function to generate Authentication token
+# input: client_userid and client_credentials to be read from configfile.py
+# output: returns authentication token
+def get_auth(client_userid_auth, client_credentials_auth):
+    token = " "
+    print("\n***********************GENERATING IAM TOKEN*************************")
+    urllib3.disable_warnings()
+    params = {'grant_type': configfile.grant_type_auth,'scope' : configfile.scope, 'client_id' : configfile.client_id_auth, 'password' : client_credentials_auth, 'username' : client_userid_auth}
+    response = requests.get(configfile.iam_url, timeout=60, verify=False, params=params)
+    if 'access_token' in json.loads(response.content):
+        token = json.loads(response.content).get('access_token')
+        print("\n***********************IAM TOKEN GENERATED***********************")
+    else:
+        print("\n************IAM TOKEN GENERATION FAILED.EXITING...****************")
+        exit()
+    return token 
+
 # Function to write the Json response to mentioned file path
 # input: response of the API request, file path where response to be written
 # output: NA
