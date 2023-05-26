@@ -12,8 +12,8 @@ def get_token(client_userid, client_credentials):
     token = " "
     print("\n***********************GENERATING IAM TOKEN*************************")
     urllib3.disable_warnings()
-    params = {'grant_type': configfile.grant_type,'scope' : configfile.scope, 'client_id' : configfile.client_id, 'password' : client_credentials, 'username' : client_userid}
-    response = requests.get(configfile.iam_url, timeout=60, verify=False, params=params)
+    params = {'grant_type': configfile.grant_type,'scope' : configfile.scope}   
+    response = requests.get(configfile.iam_url, timeout=60, verify=False, params=params , auth=(client_userid, client_credentials))
     if 'access_token' in json.loads(response.content):
         token = json.loads(response.content).get('access_token')
         print("\n***********************IAM TOKEN GENERATED***********************")
