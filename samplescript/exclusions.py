@@ -15,7 +15,7 @@ class exclusions(object):
     def get_threats(self):
         global Auth_token
         global headers
-        Auth_token= "Bearer {}".format(controller.get_auth(configfile.gtclient_id_auth, configfile.gtclient_credentials_auth))
+        Auth_token= "Bearer {}".format(controller.get_token(configfile.gtclient_id, configfile.gtclient_credentials))
         headers = {
             'x-api-key': configfile.x_api_key,
             'Authorization': Auth_token,
@@ -154,9 +154,9 @@ def main():
     hash_sha256 = obj_exclusions.get_threats() # calling Get-threats API
     obj_exclusions.post_exclusions(hash_sha256) # calling Post exclusion API
     exclusion_id = obj_exclusions.get_exclusions()   # calling get exclusion API
-    obj_exclusions.patch_exclusions(exclusion_id, hash_sha256) # calling Patch exclusion API
-    obj_exclusions.get_exclusionsByExclusionId(exclusion_id)   # calling get exclusion by exclusion ID API
-    obj_exclusions.delete_exclusionsByExclusionId(exclusion_id) # calling delete exclusion by exclusion ID API
+    obj_exclusions.patch_exclusions("3cc2e99c-d6dd-4234-a85e-91a9009aa962", hash_sha256) # calling Patch exclusion API
+    obj_exclusions.get_exclusionsByExclusionId("3cc2e99c-d6dd-4234-a85e-91a9009aa962")   # calling get exclusion by exclusion ID API
+    obj_exclusions.delete_exclusionsByExclusionId("3cc2e99c-d6dd-4234-a85e-91a9009aa962") # calling delete exclusion by exclusion ID API
     print("\n*********************END OF EXCLUSIONS**************************")
 
 #Main Function    

@@ -17,10 +17,10 @@ gtclient_credentials="wF-EJpHq73FQm1mmhNzC399D1"
 host_name = "DESKTOP-BUV2HRF"#DESKTOP-2HS9OV4"
 
 #For Exclusions api
-client_id_auth="0oae6vfj6gCEIsMId0h7"
-grant_type_auth = "password"
-gtclient_id_auth="vasav-lowerint-3@yopmail.com"
-gtclient_credentials_auth="Mcafee@123" 
+# client_id_auth="0oae6vfj6gCEIsMId0h7"
+# grant_type_auth = "password"
+# gtclient_id_auth="vasav-lowerint-3@yopmail.com"
+# gtclient_credentials_auth="Mcafee@123" 
 
 #Variables used to be read and modify from here
 rts_query_name = "ProcessHistory"
@@ -38,5 +38,5 @@ getthreats_from = 9999
 getthreats_sort = "firstDetected"
 
 alerts_from = 1683549043263
-alerts_filter ="%7B%22maGuid%22%3A%22A9B27812-9219-4D90-8CAF-2B651F0DB86C%22%2C%22severities%22%3A%5B%22s0%22%2C%22s1%22%2C%22s2%22%2C%22s3%22%2C%22s4%22%2C%22s5%22%5D%7D"
+alerts_filter ="%7B%22severities%22%3A%20%5B%20%22s0%22%2C%20%22s1%22%2C%20%22s2%22%2C%20%22s3%22%2C%20%22s4%22%2C%20%22s5%22%20%5D%20%7D"
 
