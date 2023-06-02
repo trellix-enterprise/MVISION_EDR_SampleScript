@@ -30,7 +30,7 @@ class exclusions(object):
         
         if response_status == 200:
             if response.json()['meta']['totalResourceCount'] > 0:
-                var_hash_sha256 =response.json()['data'][1]['attributes']['hashes']['sha256']
+                var_hash_sha256 =response.json()['data'][0]['attributes']['hashes']['sha256']
                 print("\nGET request for Get-Threat api fetched {} records".format( response.json()['meta']['totalResourceCount']))
             else:
                 print("\nNo threats found for the request.Exiting..")
