@@ -8,19 +8,13 @@ grant_type = "client_credentials"
 scope = "epo.admin mi.user.config mi.user.investigate gsd.a.e soc.rts.c soc.rts.r soc.hts.c soc.hts.r soc.act.tg"
 
 # User to update tenant credentials
-client_userid="Z3C5ke6wQeVFnC-0LLSDmgHM6" #"test3132334@yopmail.com" #"test2122234@yopmail.com"
+client_userid="Z3C5ke6wQeVFnC-0LLSDmgHM6" 
 client_credentials="wF-EJpHq73FQm1mmhNzC399D1" 
 # For get-threat API please use below tenant as threats are present here
 gtclient_id="7wDiu-mIqPdh0t1iM5CPfsYTc"
 gtclient_credentials="f0KUdEbXYGo84a591NQ7Awru9" 
 # User to update the host machine name for hostbased remediation
-host_name = "DESKTOP-BUV2HRF"#DESKTOP-2HS9OV4"
-
-#For Exclusions api
-# client_id_auth="0oae6vfj6gCEIsMId0h7"
-# grant_type_auth = "password"
-# gtclient_id_auth="vasav-lowerint-3@yopmail.com"
-# gtclient_credentials_auth="Mcafee@123" 
+host_name = "DESKTOP-BUV2HRF"
 
 #Variables used to be read and modify from here
 rts_query_name = "ProcessHistory"
