@@ -22,7 +22,7 @@ class alerts(object):
         }        
         print("\n***************Sending GET request for alerts********************")
         #To create the URL, make necessary changes in  configfile.py
-        alert_url = "{}/edr/v2/alerts?from={}&to={}".format(configfile.base_url,configfile.alerts_from, configfile.alerts_to)
+        alert_url = "{}/edr/v2/alerts?from={}&filter={}".format(configfile.base_url,configfile.alerts_from, configfile.alerts_filter)
         print("Alerting URL is : {}".format(alert_url))
         #call the get method for alerting api
         response = controller.callapirequest("Alerting", "GET", alert_url, headers, False)        
