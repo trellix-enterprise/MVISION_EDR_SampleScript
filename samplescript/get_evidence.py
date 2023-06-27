@@ -1,8 +1,5 @@
-import logging
 import json
-import requests
 import time
-from requests.models import Response
 import controller
 import urllib3
 import configfile
@@ -55,7 +52,6 @@ class get_evidence(object):
     #Evidence_type = ["Device", "IP", "FQDN", "Identifier"]
     def get_evidence(self,investigation_id, evidence_type = None):
         print("\n***************Sending GET request for get_evidence with Evidence type {}********************".format(evidence_type))
-        var_host_name = " "
         if evidence_type != None:
             investigation_url = "{}/edr/v2/investigations/investigation_id/evidence?evidenceType={}".format(configfile.base_url, evidence_type)
         else:

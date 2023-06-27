@@ -1,0 +1,15 @@
+{
+    "data": {
+        "type": "investigations",
+        "attributes": {
+            "eventSrc": "McAfeeESM",
+            "caseType": "Malware",     
+            "caseName": "MVISION API - EDR Investigations Demo 10 August 2020 - 4",
+            "caseHint": "hostname4-10-08-2020",
+            "casePriority": "Low",
+            "evidenceType": "Device",
+            "name": "es",
+            "hostName": "EMB-0BXXXE9-P08_20161003101947"
+        }
+    }
+}

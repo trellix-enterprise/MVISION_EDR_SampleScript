@@ -1,0 +1,10 @@
+{
+  "data": {
+    "type": "historicalSearches",
+    "attributes": {
+      "query": "ProcessName != taskhost.exe",
+      "startTime": "2021-10-07T09:26:22Z",
+      "endTime": "2022-02-02T09:26:22Z"
+    }
+  }
+}

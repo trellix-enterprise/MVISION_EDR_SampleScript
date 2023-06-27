@@ -1,8 +1,6 @@
-import logging
 import json
 import requests
 import time
-from requests.models import Response
 import controller
 import urllib3
 import configfile
