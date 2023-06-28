@@ -75,7 +75,7 @@ class search_remediation(object):
     # Returns the first row id from search result 
     def get_RTSsearchresult(self, search_id):
         var_RTSrowid = " "
-        print("\n***************Sending GET request for RTS get_status********************")
+        print("\n***************Sending GET request for RTS get_result********************")
         status_url = "{}/edr/v2/searches/realtime/{}/results".format(configfile.base_url,search_id)
         response = requests.request("GET", status_url, headers=headers)
         response_status = response.status_code
