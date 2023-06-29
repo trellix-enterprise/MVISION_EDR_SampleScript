@@ -1,9 +1,6 @@
-import logging
-import json ,ast
-import csv
+import json 
 import requests
 import time
-from requests.models import Response
 import controller
 import urllib3
 import configfile
@@ -75,7 +72,7 @@ class search_remediation(object):
     # Returns the first row id from search result 
     def get_RTSsearchresult(self, search_id):
         var_RTSrowid = " "
-        print("\n***************Sending GET request for RTS get_status********************")
+        print("\n***************Sending GET request for RTS get_result********************")
         status_url = "{}/edr/v2/searches/realtime/{}/results".format(configfile.base_url,search_id)
         response = requests.request("GET", status_url, headers=headers)
         response_status = response.status_code
@@ -84,7 +81,7 @@ class search_remediation(object):
         if response_status == 200:
             var_RTSrowid = response.json()['data'][0]['id']
         else:
-            print("\nResponse error status code for RTS get status is: {}. Stopping Execution.".format(retry_response.status_code))
+            print("\nResponse error status code for RTS get result is: {}. Stopping Execution.".format(response_status))
             controller.write_responsetoFile(response.text, './results/SearchBasedRemediation/rts_getresult_response.json')
             exit()
         controller.write_responsetoFile(response.text, './results/SearchBasedRemediation/rts_getresult_response.json')
