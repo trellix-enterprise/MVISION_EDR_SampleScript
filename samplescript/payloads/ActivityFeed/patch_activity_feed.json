@@ -1,0 +1,16 @@
+{
+  "data": {
+    "type": "activityFeed",
+    "attributes": {
+      "topic": "threatEvents",
+      "configType": "s3Config",
+      "clientEmailId": "example@gmail.com",
+      "s3Config": {
+        "s3Prefix": "trellix-eaf",
+        "roleARN": "arn:aws:iam::915741471013:role/customer_eaf_s3_cross_account_role",
+        "s3BucketName": "customer-eaf-bucket",
+        "awsRegion": "us-west-2"
+      }
+    }
+  }
+}

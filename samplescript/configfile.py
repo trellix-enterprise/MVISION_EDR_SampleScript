@@ -5,11 +5,11 @@ iam_url='https://preprod.iam.mcafee-cloud.com/iam/v1.0/token'
 #Headers to be included
 x_api_key="ECYPmTx9g01rWmT3TXUTs8mNkHjbaNSv7lAp6uov"
 grant_type = "client_credentials"
-scope = "epo.admin mi.user.config mi.user.investigate gsd.a.e soc.rts.c soc.rts.r soc.hts.c soc.hts.r soc.act.tg"
+scope = "epo.admin mi.user.config mi.user.investigate gsd.a.e soc.rts.c soc.rts.r soc.hts.c soc.hts.r soc.act.tg soc.edrfd.r soc.edrfd.w"
 
 # User to update tenant credentials
-client_userid="Z3C5ke6wQeVFnC-0LLSDmgHM6" 
-client_credentials="wF-EJpHq73FQm1mmhNzC399D1" 
+client_userid="QqiBnhxoJPQgzIs9rieVTPANW"#"Z3C5ke6wQeVFnC-0LLSDmgHM6" 
+client_credentials="IL5raQCN8ePZzBgJtm9fYYjEF"#"wF-EJpHq73FQm1mmhNzC399D1" 
 # For get-threat API please use below tenant as threats are present here
 gtclient_id="7wDiu-mIqPdh0t1iM5CPfsYTc"
 gtclient_credentials="f0KUdEbXYGo84a591NQ7Awru9" 
