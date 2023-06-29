@@ -59,7 +59,7 @@ class activity_feed(object):
         else:
             print("\nResponse error Status code for get_activity_feed is: {}".format(response_status))
             
-        # Write the response Json to /results/ActionHistory/get_actionhistory_response.json file
+        # Write the response Json to /results/ActivityFeed/get_activity_feed_response.json file
         controller.write_responsetoFile(response.text, './results/ActivityFeed/get_activity_feed_response.json')
         return activityFeedId
     
