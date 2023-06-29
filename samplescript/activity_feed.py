@@ -1,14 +1,16 @@
-import logging
 import json
-import requests
 import time
-from requests.models import Response
 import controller
 import urllib3
 import configfile
 
 class activity_feed(object):    
-    #Post the activity feed api
+    #Post the activity feed api to registers a new activity-feed configuration for the tenant.
+    #using the payload "./payloads/ActivityFeed/post_activity_feed.json"
+    # topic attribute in the payload "./payloads/ActivityFeed/post_activity_feed.json" is set to "threatEvents"
+    # other Supported values are from the given list ["threatEvents", "cas-mgmt-events", "buisnessEvents"]
+    # configType attribute in the payload "./payloads/ActivityFeed/post_activity_feed.json" is set to "s3Config"
+    # other Supported values are from the given list ["s3Config", "webhook", "syslog"]
     def post_activity_feed(self):
         global Auth_token
         global headers
@@ -64,6 +66,7 @@ class activity_feed(object):
         return activityFeedId
     
     # Retrieve activity_feed by configuration ID
+    # API response is written into  ./results/activity_feed/get_activity_feed_by_configuration_id_response.json file
     def get_activity_feedByConfigurationId(self, activity_feed_id):
         print("\n***************Sending GET request for get_activity_feedByConfigurationId********************")
         get_activity_feedByConfigurationId = "{}/edr/v2/activity-feed/configurations/{}".format(configfile.base_url, activity_feed_id)
@@ -81,7 +84,9 @@ class activity_feed(object):
             
         controller.write_responsetoFile(response.text, './results/ActivityFeed/get_activity_feed_by_configuration_id_response.json')
 
-    #Patch the activity_feed api
+    #Patch the activity_feed api  to update an existing activity-feed configuration for the tenant.
+    #using the payload "./payloads/ActivityFeed/patch_activity_feed.json"
+    # API response is written into  ./results/activity_feed/patch_activity_feed_response.json file
     def patch_activity_feed(self, activity_feed_id):
         with open('./payloads/ActivityFeed/patch_activity_feed.json') as json_path:
             activity_feed_payload = json_path.read()
@@ -104,6 +109,8 @@ class activity_feed(object):
         controller.write_responsetoFile(response.text, './results/ActivityFeed/patch_activity_feed_response.json')
         
     # Delete activity feed by configuration ID
+    # Deletes single configuration details.
+    # API response is written into  ./results/activity_feed/delete_activity_feed_by_configuration_id_response.json file
     def delete_activity_feedByConfigurationId(self, activity_feed_id):
         print("\n***************Sending DELETE request for delete_activity_feedByConfigurationId********************")
         delete_activity_feedByConfigurationId = "{}/edr/v2/activity-feed/configurations/{}".format(configfile.base_url, activity_feed_id)
@@ -118,7 +125,9 @@ class activity_feed(object):
             
         controller.write_responsetoFile(response.text, './results/ActivityFeed/delete_activity_feed_by_configuration_id_response.json')
 
-    #Delete activity feed by Tenant
+    # Delete activity feed by Tenant
+    # Deletes all the activity-feed configurations for a tenant.
+    # API response is written into  ./results/activity_feed/delete_activity_feed_by_tenant_response.json file
     def delete_activity_feedByTenant(self):
         print("\n***************Sending DELETE request for delete_activity_feedByTenant********************")
         delete_activity_feedByTenant = "{}/edr/v2/activity-feed/tenant".format(configfile.base_url)
