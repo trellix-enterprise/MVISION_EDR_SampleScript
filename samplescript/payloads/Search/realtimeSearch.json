@@ -2,7 +2,7 @@
     "data": {
         "type": "realTimeSearches",
         "attributes": {
-            "query": "HostInfo"
+            "query": "Processes name, md5 , sha256 where Processes sha256 starts with \"A\" or Processes sha256 starts with \"3\""
         }
     }
 }

@@ -2,9 +2,9 @@
     "data": {
         "type": "historicalSearches",
         "attributes": {
-            "query": "ProcessName != taskhost.exe and DeviceName contains DESKTOP",
+            "query": "ProcessName contains exe and DeviceName = 1VBW20048601",
             "startTime": "2023-03-07T09:26:22Z",
-            "endTime": "2023-05-08T09:26:22Z"
+            "endTime": "2023-06-28T19:26:22Z"
         }
     }
 }
