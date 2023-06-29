@@ -75,13 +75,12 @@ class Mvapi_ds(object):
         controller.write_responsetoFile(response.text, './results/Mvapi_ds/ds_getresult_response.json')
        
         if response.status_code == 200 and len(response.json()["data"]) > 0:
-            print("\n###############DeviceSearch Successful##########################")
+            print("\n############### DeviceSearch Successful##########################")
         else:
-            print("\n#################No data for DeviceSearch Query########################")
+            print("\n################# No data for DeviceSearch Query########################")
             
     def ds_getexport(self, ds_searchid):
         Export_result_url = "{}/edr/v2/searches/historical/{}/results?output=file&format=csv".format(configfile.base_url,ds_searchid)
-        print(Export_result_url)
         time.sleep(5)
         
         print("\n***************Sending GET request for DS get_exportfileurl********************")

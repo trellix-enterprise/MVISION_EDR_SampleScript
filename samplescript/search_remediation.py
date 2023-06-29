@@ -64,6 +64,8 @@ class search_remediation(object):
                     print("\nStatus code for RTS get status is {}".format(retry_response.status_code))
                 status = False
                 break
+        elif response_status == 303:
+            print("\nStatus code for RTS get status is {}".format(response_status))
         else:
             print("\nResponse error status code for RTS get status is: {}. Stopping Execution.".format(response_status.status_code))
             exit()
